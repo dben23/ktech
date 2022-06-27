@@ -10,18 +10,26 @@ import {
   SidebarRoute,
 } from "./SidebarElements";
 
-const Sidebar = () => {
+const Sidebar = ({ toggle, isOpen }) => {
   return (
-    <SidebarContainer>
-      <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="discover">Discover</SidebarLink>
-          <SidebarLink to="services">Services</SidebarLink>
-          <SidebarLink to="signup">Sign Up</SidebarLink>
+          <SidebarLink to="domov" onClick={toggle}>
+            Domov
+          </SidebarLink>
+          <SidebarLink to="onas" onClick={toggle}>
+            O Nás
+          </SidebarLink>
+          <SidebarLink to="smarthome" onClick={toggle}>
+            Smart Home
+          </SidebarLink>
+          <SidebarLink to="signup" onClick={toggle}>
+            Sign Up
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>

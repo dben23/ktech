@@ -14,7 +14,7 @@ import {
 
 import "./logo.style.css";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
@@ -26,7 +26,7 @@ const Navbar = () => {
               className="logo"
             />
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
