@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   z-index: 10;
 
   @media screen and (max-width: 960px) {
-    transition 0.8s all ease;
+    transition: 0.8s all ease;
   }
 `;
 
@@ -107,7 +107,7 @@ export const NavBtnLink = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   textô-decoration: none;
 
-  &: hover {
+  &:hover {
     transition: all 0.2 ease-in-out;
     background: #fff;
     color: #010606;
